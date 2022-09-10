@@ -1,0 +1,13 @@
+name: Sellsystem
+version: 1.0
+main: at.mrpuffi.sellsystem.Main
+api-version: 1.16
+softdepend: [ Vault ]
+authors: [ nniklxs ]
+description: Sellsystem füre Kype-MC.de
+
+commands:
+  sell:
+    aliases:
+      - sellgui
+      - verkaufen
