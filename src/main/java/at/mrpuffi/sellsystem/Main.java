@@ -17,6 +17,7 @@ import java.util.Collection;
 public final class Main extends JavaPlugin {
 
     private Economy economy;
+    public final String prefix = "&b&lKYPE &8» &7";
 
     private final Collection<SellableItem> sellableWoods = new ArrayList<>();
     private final Collection<SellableItem> sellableStones = new ArrayList<>();
@@ -74,6 +75,72 @@ public final class Main extends JavaPlugin {
         sellableWoods.add(SellableItem.of(Material.WARPED_PLANKS,
                 MessageUtil.getMessageColour("&8» &7Wirrstiel"),
                 0.1));
+
+        sellableStones.add(SellableItem.of(Material.STONE,
+                MessageUtil.getMessageColour("&8» &7Stein"),
+                0.1));
+
+        sellableStones.add(SellableItem.of(Material.COBBLESTONE,
+                MessageUtil.getMessageColour("&8» &7Bruchstein"),
+                0.1));
+
+        sellableStones.add(SellableItem.of(Material.GRANITE,
+                MessageUtil.getMessageColour("&8» &7Granite"),
+                0.1));
+
+        sellableStones.add(SellableItem.of(Material.DIORITE,
+                MessageUtil.getMessageColour("&8» &7Diorite"),
+                0.1));
+
+        sellableStones.add(SellableItem.of(Material.ANDESITE,
+                MessageUtil.getMessageColour("&8» &7Andesite"),
+                0.1));
+
+        sellableStones.add(SellableItem.of(Material.NETHER_BRICKS,
+                MessageUtil.getMessageColour("&8» &7Nethersteinziegel"),
+                0.1));
+
+        sellableStones.add(SellableItem.of(Material.END_STONE,
+                MessageUtil.getMessageColour("&8» &7Endstein"),
+                0.1));
+
+        sellableStones.add(SellableItem.of(Material.SAND,
+                MessageUtil.getMessageColour("&8» &7Sand"),
+                0.1));
+
+        sellableStones.add(SellableItem.of(Material.SANDSTONE,
+                MessageUtil.getMessageColour("&8» &7Sandstein"),
+                0.1));
+        sellableStones.add(SellableItem.of(Material.DIRT,
+                MessageUtil.getMessageColour("&8» &7Stein"),
+                0.1));
+
+        sellableOthers.add(SellableItem.of(Material.ROTTEN_FLESH,
+                MessageUtil.getMessageColour("&8» &7Verottetes"),
+                0.1));
+        // FF
+
+        sellableOthers.add(SellableItem.of(Material.BONE,
+                MessageUtil.getMessageColour("&8» &7Knochen"),
+                0.1));
+
+        sellableOthers.add(SellableItem.of(Material.STRING,
+                MessageUtil.getMessageColour("&8» &7Faden"),
+                0.1));
+
+        sellableOthers.add(SellableItem.of(Material.SPIDER_EYE,
+                MessageUtil.getMessageColour("&8» &7Spinnenauge"),
+                0.1));
+
+        sellableOthers.add(SellableItem.of(Material.SLIME_BALL,
+                MessageUtil.getMessageColour("&8» &7Schleimball"),
+                0.1));
+
+        sellableOthers.add(SellableItem.of(Material.FEATHER,
+                MessageUtil.getMessageColour("&8» &7Feder"),
+                0.1));
+
+
     }
 
     public Economy getEconomy() {

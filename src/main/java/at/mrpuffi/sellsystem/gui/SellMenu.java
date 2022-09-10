@@ -35,6 +35,8 @@ public class SellMenu extends RubyInventory {
         this.items = items;
         this.pagination = new PageHandler(this);
         registerPages();
+
+
     }
 
     private void registerPages() {
@@ -112,15 +114,15 @@ public class SellMenu extends RubyInventory {
 
                 player.getInventory().removeItem(itemStack);
                 player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0F, 1.0F);
-                player.sendMessage(MessageUtil.getMessageColour("&7Du hast &e" + amount + "x " + material.name().toUpperCase(Locale.ROOT) + " &7für &a" + reward + "$ &bverkauft&7!"));
+                player.sendMessage(MessageUtil.getMessageColour(plugin.prefix + "&7Du hast &e" + amount + "x " + material.name().toUpperCase(Locale.ROOT) + " &7für &a" + reward + "$ &bverkauft&7!"));
 
             } else {
                 player.playSound(player.getLocation(), Sound.ENTITY_VILLAGER_NO, 1.0F, 1.0F);
-                player.sendMessage(MessageUtil.getMessageColour("&cEs ist etwas schiefgelaufen, die Transaktion wurde daher abgebrochen!"));
+                player.sendMessage(MessageUtil.getMessageColour(plugin.prefix + "&cEs ist etwas schiefgelaufen, die Transaktion wurde daher abgebrochen!"));
             }
         } else {
             player.playSound(player.getLocation(), Sound.ENTITY_VILLAGER_NO, 1.0F, 1.0F);
-            player.sendMessage(MessageUtil.getMessageColour("&cDu hast nicht genügend Items!"));
+            player.sendMessage(MessageUtil.getMessageColour(plugin.prefix + "&cDu hast nicht genügend Items!"));
         }
     }
 }

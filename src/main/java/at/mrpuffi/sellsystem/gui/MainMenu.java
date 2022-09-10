@@ -40,7 +40,7 @@ public class MainMenu extends RubyInventory {
         lore.add(MessageUtil.getMessageColour("&7Kontostand: &b" + RoundUtil.round(economy.getBalance(player), 2)));
         addButton(0, 4, new Button(new ItemBuilder(Material.PLAYER_HEAD)
                 .setDisplayName(MessageUtil.getMessageColour("&8» &aProfil"))
-                .setPlayerHead(player)
+                .setHead(player.getName())
                 .setLore(lore)
                 .build()));
 
