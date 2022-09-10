@@ -50,11 +50,30 @@ public final class Main extends JavaPlugin {
     private void initCategories() {
 
         //Hier items in Collections adden
-
         sellableWoods.add(SellableItem.of(Material.OAK_PLANKS,
                 MessageUtil.getMessageColour("&8» &7Eichenholz"),
                 0.1));
-
+        sellableWoods.add(SellableItem.of(Material.SPRUCE_PLANKS,
+                MessageUtil.getMessageColour("&8» &7Fichtenholz"),
+                0.1));
+        sellableWoods.add(SellableItem.of(Material.DARK_OAK_PLANKS,
+                MessageUtil.getMessageColour("&8» &7Schwarzeichenholz"),
+                0.1));
+        sellableWoods.add(SellableItem.of(Material.BIRCH_PLANKS,
+                MessageUtil.getMessageColour("&8» &7Birkenholz"),
+                0.1));
+        sellableWoods.add(SellableItem.of(Material.JUNGLE_PLANKS,
+                MessageUtil.getMessageColour("&8» &7Dschungelholz"),
+                0.1));
+        sellableWoods.add(SellableItem.of(Material.ACACIA_PLANKS,
+                MessageUtil.getMessageColour("&8» &7Akazienholz"),
+                0.1));
+        sellableWoods.add(SellableItem.of(Material.CRIMSON_PLANKS,
+                MessageUtil.getMessageColour("&8» &7Karmesenstiel"),
+                0.1));
+        sellableWoods.add(SellableItem.of(Material.WARPED_PLANKS,
+                MessageUtil.getMessageColour("&8» &7Wirrstiel"),
+                0.1));
     }
 
     public Economy getEconomy() {

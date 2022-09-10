@@ -81,14 +81,20 @@ public class SellMenu extends RubyInventory {
             addButton(3, 2, new Button(new ItemBuilder(Material.ARROW)
                     .setDisplayName(MessageUtil.getMessageColour("&8» &6Vorherige Seite"))
                     .build())
-                    .setClickEventConsumer(e -> pagination.previousPage()));
+                    .setClickEventConsumer(e -> {
+                        pagination.previousPage();
+                        open();
+                    }));
         }
 
         if (!pagination.isLastPage()) {
             addButton(3, 6, new Button(new ItemBuilder(Material.ARROW)
-                    .setDisplayName(MessageUtil.getMessageColour("&8» &6Nächste Seite Seite"))
+                    .setDisplayName(MessageUtil.getMessageColour("&8» &6Nächste Seite"))
                     .build())
-                    .setClickEventConsumer(e -> pagination.nextPage()));
+                    .setClickEventConsumer(e -> {
+                        pagination.nextPage();
+                        open();
+                    }));
         }
 
         pagination.update();
