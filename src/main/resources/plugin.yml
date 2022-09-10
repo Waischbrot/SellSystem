@@ -1,5 +1,5 @@
 name: Sellsystem
-version: '${project.version}'
+version: 1.0
 main: at.mrpuffi.sellsystem.Main
 api-version: 1.16
 softdepend: [ Vault ]
