@@ -113,15 +113,21 @@ public class SellMenu extends RubyInventory {
             if (response.transactionSuccess()) {
 
                 player.getInventory().removeItem(itemStack);
-                player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0F, 1.0F);
+                if (!plugin.toggledSound.contains(player.getUniqueId())) {
+                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0F, 1.0F);
+                }
                 player.sendMessage(MessageUtil.getMessageColour(plugin.prefix + "&7Du hast &e" + amount + "x " + material.name().toUpperCase(Locale.ROOT) + " &7für &a" + reward + "$ &bverkauft&7!"));
 
             } else {
-                player.playSound(player.getLocation(), Sound.ENTITY_VILLAGER_NO, 1.0F, 1.0F);
+                if (!plugin.toggledSound.contains(player.getUniqueId())) {
+                    player.playSound(player.getLocation(), Sound.ENTITY_VILLAGER_NO, 1.0F, 1.0F);
+                }
                 player.sendMessage(MessageUtil.getMessageColour(plugin.prefix + "&cEs ist etwas schiefgelaufen, die Transaktion wurde daher abgebrochen!"));
             }
         } else {
-            player.playSound(player.getLocation(), Sound.ENTITY_VILLAGER_NO, 1.0F, 1.0F);
+            if (!plugin.toggledSound.contains(player.getUniqueId())) {
+                player.playSound(player.getLocation(), Sound.ENTITY_VILLAGER_NO, 1.0F, 1.0F);
+            }
             player.sendMessage(MessageUtil.getMessageColour(plugin.prefix + "&cDu hast nicht genügend Items!"));
         }
     }

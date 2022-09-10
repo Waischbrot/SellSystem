@@ -28,6 +28,15 @@ public record SellCommand(Main plugin) implements CommandExecutor {
                     case "stone" -> new SellMenu(player, plugin, plugin.getSellableStones(), MessageUtil.getMessageColour("&8× &9Kategorie: &aStein & Erze"));
                     case "wood" -> new SellMenu(player, plugin, plugin.getSellableWoods(), MessageUtil.getMessageColour("&8× &9Kategorie: &aHolz"));
                     case "others" -> new SellMenu(player, plugin, plugin.getSellableOthers(), MessageUtil.getMessageColour("&8× &9Kategorie: &aSonstiges"));
+                    case "sound" -> {
+                        if (plugin.toggledSound.contains(player.getUniqueId())) {
+                            plugin.toggledSound.remove(player.getUniqueId());
+                            player.sendMessage(MessageUtil.getMessageColour(plugin.prefix + "&7Du hast die Sounds &aaktiviert&7!"));
+                        } else {
+                            plugin.toggledSound.add(player.getUniqueId());
+                            player.sendMessage(MessageUtil.getMessageColour(plugin.prefix + "&7Du hast die Sounds &cdeaktiviert&7!"));
+                        }
+                    }
                     default -> new MainMenu(player, plugin).open();
                 }
             } else {

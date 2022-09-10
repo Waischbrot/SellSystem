@@ -7,17 +7,19 @@ import de.waischbrot.messages.MessageUtil;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.*;
 
 public final class Main extends JavaPlugin {
 
     private Economy economy;
     public final String prefix = "&b&lKYPE &8» &7";
+
+    public final Collection<UUID> toggledSound = new ArrayList<>();
 
     private final Collection<SellableItem> sellableWoods = new ArrayList<>();
     private final Collection<SellableItem> sellableStones = new ArrayList<>();
